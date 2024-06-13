@@ -12,6 +12,13 @@ const collectEmployees = function() {
     const firstName = prompt("First Name:");
     const lastName = prompt("Last Name:");
     const salary = prompt("Salary:");
+     
+/*     const testSalary = function(salary) {
+      if (isNaN(salary)) {
+        prompt('Not a number! Input salary again');
+      }
+    }
+    testSalary(salary); */
 
     employeesArray.push({
       firstName, 
@@ -36,7 +43,14 @@ function displayAverageSalary(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  const random = Math.floor(Math.random() *employeesArray.length);
+
+  const randomEmployee =(employeesArray[random]);
+  
+  console.log(`Congrats to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 }
+ 
+
 
 /*
   ====================
