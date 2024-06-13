@@ -3,27 +3,25 @@
 ## Description
 
 This project invovled adding code to an existing page to create several prompts and use the user inputs from the prompts for other tasks including finding an average of salaries and selecting a random employee.  This project helped to provide a deeper understanding of how to navigate and use different facets of JavaScript and debugging code. 
+You can view this webpage by clicking [here](https://danimsteger.github.io/employee-payroll-tracker/).
+
 ![Sample view of the page](</assets/images/main-page.png>)
 
-You can view this webpage by clicking [here](https://danimsteger.github.io/employee-payroll-tracker/).
+
 
 ## Installation
 
 To access the live project, you can visit this [link](https://danimsteger.github.io/employee-payroll-tracker/).
 
-## Installation
-
-To access the live project, you can visit this [link](https://danimsteger.github.io/danielle-steger-portfolio/)
-
 To view the code of this project, you can clone this repository using the following commands in your command line:
 
 ### Clone this repository
 ~~~
-git clone git@github.com:danimsteger/horiseon-accessibility.git
+git clone git@github.com:danimsteger/employee-payroll-tracker.git
 ~~~
 ### Go into this repository
 ~~~
-cd horiseon-accessibility
+cd employee-payroll-tracker/
 ~~~
 ### Access code of the repository
 ~~~
