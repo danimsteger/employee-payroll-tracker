@@ -7,14 +7,15 @@ const collectEmployees = function() {
 
   let keepGoing = true;
   let employeesArray = [];
+ 
 
   while (keepGoing) {
     const firstName = prompt("First Name:");
     const lastName = prompt("Last Name:");
     
-    let salary = prompt("Salary:");
+    let salary = Number(prompt("Salary:"));
     while (isNaN(salary)) {
-      salary = prompt("Not a number. Input salary again!")
+      salary = Number(prompt("Not a number. Input salary again!"));
     }
 
     employeesArray.push({
@@ -29,12 +30,30 @@ const collectEmployees = function() {
     }
   }
   return employeesArray;
+ 
 }
 
 
 // Display the average salary
+
+
+
 function displayAverageSalary(employeesArray) {
   // TODO: Calculate and display the average salary
+  let sum = 0;
+
+    for (let i = 0; i < employeesArray.length; i++) {
+      sum += employeesArray[i].salary;
+      console.log(employeesArray[i].salary);
+    }
+    console.log(sum);
+    console.log(employeesArray.length);
+
+    const average = sum / employeesArray.length;
+
+    console.log(average);
+    
+
 }
 
 // Select a random employee
