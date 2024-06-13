@@ -24,7 +24,7 @@ const collectEmployees = function() {
       lastName,
       salary
     });
-    const again = confirm("Would you like to add another employee")
+    const again = confirm("Would you like to add another employee?")
     if (!again) {
         keepGoing = false
     }
@@ -54,7 +54,7 @@ const getRandomEmployee = function(employeesArray) {
   //choose random index of the employees array 
   const random = Math.floor(Math.random() *employeesArray.length);
   const randomEmployee = employeesArray[random];
-  
+
   //log the first and last name of the random index chosen above
   console.log(`Congrats to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 }
