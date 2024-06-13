@@ -8,65 +8,57 @@ const collectEmployees = function() {
   let keepGoing = true;
   let employeesArray = [];
  
-
+  //Loops through whenever user selects okay for adding an additional employee
   while (keepGoing) {
     const firstName = prompt("First Name:");
     const lastName = prompt("Last Name:");
-    
+    //takes user inputs for salary and makes them numbers instead of strings
     let salary = Number(prompt("Salary:"));
+    //if user input for salary prompt is not a number, they will recieve this message
     while (isNaN(salary)) {
       salary = Number(prompt("Not a number. Input salary again!"));
     }
-
+    //Push user inputs from above prompts to an array
     employeesArray.push({
       firstName, 
       lastName,
       salary
     });
-
     const again = confirm("Would you like to add another employee")
     if (!again) {
         keepGoing = false
     }
   }
+  // returns employeesArray to the console
   return employeesArray;
- 
 }
 
 
 // Display the average salary
-
-
-
 function displayAverageSalary(employeesArray) {
   // TODO: Calculate and display the average salary
-  let sum = 0;
 
+  //find sum of the salarys in the employeesArray
+  let sum = 0;
     for (let i = 0; i < employeesArray.length; i++) {
       sum += employeesArray[i].salary;
-      console.log(employeesArray[i].salary);
     }
-    console.log(sum);
-    console.log(employeesArray.length);
-
+    //average is sum of numbers, divided by the number of numbers (the length of the array)
     const average = sum / employeesArray.length;
-
-    console.log(average);
-    
-
+    console.log(`The average employee salary between our ${employeesArray.length} employee(s) is ${average}`);
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  //choose random index of the employees array 
   const random = Math.floor(Math.random() *employeesArray.length);
-
   const randomEmployee = employeesArray[random];
   
+  //log the first and last name of the random index chosen above
   console.log(`Congrats to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 }
  
-
 
 /*
   ====================
