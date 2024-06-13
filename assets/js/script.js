@@ -6,41 +6,26 @@ const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
 
   let keepGoing = true;
+  let employeesArray = [];
 
   while (keepGoing) {
     const firstName = prompt("First Name:");
     const lastName = prompt("Last Name:");
     const salary = prompt("Salary:");
+
+    employeesArray.push({
+      firstName, 
+      lastName,
+      salary
+    });
+
     const again = confirm("Would you like to add another employee")
     if (!again) {
         keepGoing = false
     }
   }
+  return employeesArray;
 }
-
-
-/* 
-  const employee = function() {
-    const firstName = prompt("First Name:");
-    const lastName = prompt("Last Name:");
-    const salary = prompt("Salary:");
-    const more = confirm("Would you like to add another employee")
-  }
-
-  employee();
-
-  let again = true;
-    while(again) {
-      employee();
-    }
-  
-    const done = alert("done");
-
-
-
-  } */
- 
-
 
 
 // Display the average salary
